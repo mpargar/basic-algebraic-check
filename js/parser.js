@@ -70,7 +70,7 @@ function iniciarParser() {
         apun++;
         console.log('El contador aumenta en 1 -> ' + apun);
       }else {
-        //errores(1, tablaLexica[apun][0]);
+        errores(200, tablaLexica[apun][0]);
         console.log('-----------------------ERROR1-----------------------------');
         console.log(pila);
         console.log(tablaLexica);
@@ -91,16 +91,35 @@ function iniciarParser() {
           console.log(pila);
         }
       }else{
-        //errores(2, tablaLexica[apun][0]);
+        switch (x) {
+          case '1':
+          case '2':
+          case '4':
+          case '3':
+            swal("Error #202 o #203", "Falta identificador o delimitador en línea "+tablaLexica[apun][0], "error")
+            break;
+          case '5':
+          case '7':
+            swal("Error #204", "Falta operador en línea "+tablaLexica[apun][0], "error")
+            break;
+          case '6':
+            swal("Error #203", "Falta identificador en línea "+tablaLexica[apun][0], "error")
+            break;
+          default:
+
+        }
         console.log('-----------------------ERROR2-----------------------------');
         console.log(pila);
         console.log(tablaLexica);
         console.log(x + ' <- X');
         console.log(k + ' <- K');
         console.log('---------------------------------------------------------');
+        console.log(renglones);
+        console.log(tablaLexica[apun-1][1]) //1 Es el token
         return false;
       }
     }
   }while (x!='$');
+
   console.log('TODO BIEN');
 }

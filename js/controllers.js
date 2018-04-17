@@ -17,6 +17,10 @@ function errores(id, linea) {
   swal("Error #"+id, ers[id]+linea+".", "error");
 }
 
+function generateError(id, text, line) {
+  swal("Error #"+id, ers[id]+linea+".", "error");
+}
+
 /*
 ////Eventos////
 */
