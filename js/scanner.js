@@ -95,6 +95,8 @@
       }
     }
     if(!error){
-      console.log(resultados);
+      return true
+    }else{
+      return false
     }
   }

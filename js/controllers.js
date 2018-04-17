@@ -8,8 +8,13 @@ var $entrada = $('#text-container');
 */
 var ers = [];
 ers[101] = 'Símbolo desconocido en linea ';
+ers[202] = 'Falta delimitador en linea '
+ers[203] = 'Falta identificador en linea '
+ers[204] = 'Falta operador en linea '
+ers[205] = 'Error Sintáctico, cerca de linea '
+
 function errores(id, linea) {
-  swal("Error"+id, ers[id]+linea+".", "error");
+  swal("Error #"+id, ers[id]+linea+".", "error");
 }
 
 /*
@@ -18,7 +23,9 @@ function errores(id, linea) {
 $(document).ready(function() {
   $boton.click(function(event) {
     event.preventDefault();
-    iniciarScanner($entrada[0].value);
+    if(iniciarScanner($entrada[0].value)){
+      iniciarParser();
+    }
   });
 
 });
