@@ -121,5 +121,5 @@ function iniciarParser() {
     }
   }while (x!='$');
 
-  console.log('TODO BIEN');
+  swal("No hay errores", "El programa no pudo encontrar ningún error", "success");
 }
