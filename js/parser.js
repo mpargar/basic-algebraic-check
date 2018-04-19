@@ -70,7 +70,7 @@ function iniciarParser() {
         apun++;
         console.log('El contador aumenta en 1 -> ' + apun);
       }else {
-        errores(200, tablaLexica[apun][0]);
+        errores(205, (tablaLexica[apun][0]!='$')?tablaLexica[apun][0]:tablaLexica[apun-1][0]);
         console.log('-----------------------ERROR1-----------------------------');
         console.log(pila);
         console.log(tablaLexica);

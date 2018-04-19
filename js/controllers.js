@@ -7,7 +7,7 @@ var $entrada = $('#text-container');
   ////Errores////
 */
 var ers = [];
-ers[101] = 'Símbolo desconocido en linea ';
+ers[101] = 'Símbolo desconocido en linea '
 ers[202] = 'Falta delimitador en linea '
 ers[203] = 'Falta identificador en linea '
 ers[204] = 'Falta operador en linea '
